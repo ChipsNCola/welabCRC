@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request, jsonify
 import numpy as np
+import torch
 from transformers import TextClassificationPipeline
 from transformers import BertForSequenceClassification
 
