@@ -32,8 +32,7 @@ def predict():
     """ Prediction function."""
     response = request.form['text']
     prediction_tag=get_label(response)
-        # Render the request to the template
-        return render_template('index.html', text=prediction_tag, submission=response)
+    return render_template('index.html', text=prediction_tag, submission=response)
 
     if request.method == 'GET':
         return render_template('index.html')
