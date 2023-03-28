@@ -13,7 +13,7 @@ model = BertForSequenceClassification.from_pretrained("bert-base-uncased",
                                                       num_labels=3,
                                                       output_attentions=False,
                                                       output_hidden_states=False)
-model.load_state_dict(torch.load("./model/finetuned_BERT_epoch_3.model"))
+model.load_state_dict(torch.load("./welabCRC/model/finetuned_BERT_epoch_3.model"))
 
 def get_label(text):
     pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer, return_all_scores=False,device="cuda:0")
