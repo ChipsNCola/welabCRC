@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    body {
+        background-image: url("{{url_for('static', filename='background.jpg')}}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+                
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<br />
+<br />
+
+<div>
+<h1 align="center">PoC CRC - Classification de text - Welab-Boost</h1>
+</div>
+<br />
+<br />
+
+<div style="text-align:center">
+<img src="{{url_for('static', filename='machine_learning.gif')}}" height="250" width="500">
+</div>
+<br />
+<br />
+
+<div style="width:700px;margin:0 auto;text-align:center">
+    
+    Ceci est un exemple de classification en utilisant BERT sur un jeu de données CRC.
+
+</div>
+<br />
+
+
+<h4 align="center"> Réclamation : {{ submission }}</h4>
+<h2 align="center" style="color: green;" value = "Predicted Tag"> {{ text }}</h2>
+</body>
+</html>
