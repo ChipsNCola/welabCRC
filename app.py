@@ -15,7 +15,7 @@ model = BertForSequenceClassification.from_pretrained("bert-base-uncased",
                                                       num_labels=3,
                                                       output_attentions=False,
                                                       output_hidden_states=False)
-model.load_state_dict(torch.load("./model/finetuned_BERT_epoch_3.model",map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("./model/finetuned_BERT_epoch_6.model",map_location=torch.device('cpu')))
 
 def get_label(text):
     pipe = TextClassificationPipeline(model=model, tokenizer=tokenizer, return_all_scores=False,device="cpu")
